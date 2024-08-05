@@ -1,0 +1,87 @@
+
+.body-example-size{
+    width: 20%;
+    height: auto;
+}
+
+
+.hover-card {
+    width: 100%;
+    height: 350px;
+/* 			padding: 20px; */
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #d9fffc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    border: 1px solid #202733;
+    align-items: center;
+    justify-content: center;
+    display: flex; 
+}
+
+.hover-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hover-card .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hover-card button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hover-card button:hover {
+    background-color: #333;
+}
+
+.hover-card::before {
+    content: '';
+    position: absolute;
+    bottom: -200%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background-color: #66fcf1;
+    border-radius: 50%;
+    transition: bottom 1s ease, opacity 1s ease;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+}
+
+.hover-card:hover::before {
+    bottom: -150%;
+    opacity: 1;
+}
+/* .image{
+    filter: grayscale(1);
+
+} */
+.hover-card .content{
+    font-family: "EB Garamond", serif;
+    font-weight: 800;
+}
+.hover-card .content p{
+    color: #202833;
+    font-size: 18px;
+}
+
+.hover-card .content h3{
+    color: #202833;
+    font-weight: 700;
+}
